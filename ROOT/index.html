@@ -114,40 +114,13 @@ span.psw {
 
 $("#login").click(function(){
 
-//   $.ajax({
-//     type:'POST',        
-//     url: "/userAction", 
-//     success: function(result){
+  $.ajax({
+    type:'POST',        
+    url: "/userAction", 
+    success: function(result){
 
    
-//   }});
-
-
-	const crypto = require('crypto');
-    var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-    var burl = "https://api.binance.com";
-    var endPoint = "/api/v3/account";
-    var dataQueryString = "timestamp=" + Date.now();
-    var keys = {
-        "APIkey" :'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
-        "SECRETkey" : 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB'
-        }
-    var signature = crypto.createHmac('sha256',keys['SECRETkey']).update(dataQueryString).digest('hex');
-    var url = burl + endPoint + '?' + dataQueryString + '&signature=' + signature;
-    var ourRequest = new XMLHttpRequest();
-    ourRequest.open('GET',url,true);
-    ourRequest.setRequestHeader('X-MBX-APIKEY', keys['APIkey']);
-    var arrayCleaned = ourRequest.responseText;
-//     .balances.map(ele => {
-//             return {
-//                 "asset" : ele.asset,
-//                 "free" : ele.free
-//             }
-//         })
-    console.log('arrayCleaned');
-    console.log(arrayCleaned);
-    ourRequest.send();	
-
+  }});
 
 });
 
