@@ -1,0 +1,10 @@
+<web-app>           
+	<servlet>
+		<servlet-name>UserAction</servlet-name>
+		<servlet-class>com.base.user.UserAction</servlet-class>
+		<servlet-mapping>
+	    	<servlet-name>UserAction</servlet-name>
+			<url-pattern>/UserAction/*</url-pattern>
+		</servlet-mapping>
+	</servlet>
+</web-app>
